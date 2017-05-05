@@ -11,7 +11,7 @@ package mindgamesproyecto.juegos;
  */
 public class go implements juegoInter{
     @Override
-    public void juego(){//test
-        System.out.println("Soy go");
+    public boolean comer(Pieza p) {
+        return true;
     }
 }

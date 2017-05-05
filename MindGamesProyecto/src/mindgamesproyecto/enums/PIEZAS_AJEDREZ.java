@@ -3,15 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package mindgamesproyecto.juegos;
+package mindgamesproyecto.enums;
 
 /**
  *
  * @author GSolano3
  */
-public class tablero implements juegoInter{
-    @Override
-    public boolean comer(Pieza p) {
-        return true;
-    }
+public enum PIEZAS_AJEDREZ {
+    PEON, 
+    ALFIL,  
+    CABALLO,  
+    TORRE,  
+    REINA,  
+    REY 
 }

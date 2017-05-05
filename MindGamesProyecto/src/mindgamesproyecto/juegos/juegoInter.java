@@ -10,6 +10,7 @@ package mindgamesproyecto.juegos;
  * @author GSolano3
  */
 public interface juegoInter {
-    public void juego();//test
+    //public void juego();//test
+    public boolean comer(Pieza p); 
 }
         
