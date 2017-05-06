@@ -3,15 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package mindgamesproyecto.juegos;
+package MindGames.Entities;
 
 /**
  *
  * @author GSolano3
  */
-public class go implements juegoInter{
-    @Override
-    public boolean comer(Pieza p) {
-        return true;
-    }
+public interface IJuego {
+    //public void juego();//test
+    public boolean comer(Pieza p); 
 }
+        

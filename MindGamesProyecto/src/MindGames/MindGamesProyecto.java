@@ -3,17 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package mindgamesproyecto;
+package MindGames;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Scanner;
-import mindgamesproyecto.juegos.Pieza;
-import mindgamesproyecto.juegos.ajedrez;
-import mindgamesproyecto.juegos.juegoInter;
-import mindgamesproyecto.juegos.juegosFabrica;
-import mindgamesproyecto.enums.PIEZAS_AJEDREZ;
+import MindGames.Entities.Pieza;
+import MindGames.Entities.Ajedrez;
+import MindGames.Entities.JuegosFabrica;
+import MindGames.Enums.PiezasAjedrez;
+import MindGames.Entities.IJuego;
 /**
  *
  * @author GSolano3
@@ -33,7 +33,7 @@ public class MindGamesProyecto {
 //        juegoInter game = juegosFabrica.getJuego(opcion);
 //        game.juego();
     
-        ajedrez aj = new ajedrez(); 
+        Ajedrez aj = new Ajedrez(); 
         Scanner sc = new Scanner(System.in); 
         System.out.println("Determina si una pieza puede comer a otra."); 
         System.out.println("Seleccione pieza Blanca:"); 
@@ -43,7 +43,7 @@ public class MindGamesProyecto {
         System.out.println("Selecciona la posicion X,Y(Separado por \",\"):"); 
         String posicion = sc.next(); 
         String[] posiciones = posicion.split(","); 
-        Pieza piezaB = aj.definePiezas(PIEZAS_AJEDREZ.values()[piezaInt], true, new Integer(posiciones[0]), new Integer(posiciones[1])); 
+        Pieza piezaB = aj.definePiezas(PiezasAjedrez.values()[piezaInt], true, new Integer(posiciones[0]), new Integer(posiciones[1])); 
         System.out.println("Selecciona pieza Negra:"); 
         menuPiezas(); 
         piezaInt = sc.nextInt(); 
@@ -51,7 +51,7 @@ public class MindGamesProyecto {
         System.out.println("Selecciona la posicion X,Y(Separado por \",\"):"); 
         posicion = sc.next(); 
         posiciones = posicion.split(","); 
-        Pieza piezaN = aj.definePiezas(PIEZAS_AJEDREZ.values()[piezaInt], true, new Integer(posiciones[0]), new Integer(posiciones[1])); 
+        Pieza piezaN = aj.definePiezas(PiezasAjedrez.values()[piezaInt], true, new Integer(posiciones[0]), new Integer(posiciones[1])); 
         if(piezaB.getComer().comer(piezaN)){ 
             System.out.println(piezaB.getNombre()+"("+piezaB.getImagen()+")"+" blanca come a "+piezaN.getNombre()+"("+piezaN.getImagen()+")"); 
         } else { 
@@ -68,7 +68,7 @@ public class MindGamesProyecto {
     } 
     public static void menuPiezas(){ 
         System.out.println("Opciones pieza:"); 
-        for(PIEZAS_AJEDREZ pieza:PIEZAS_AJEDREZ.values()){ 
+        for(PiezasAjedrez pieza:PiezasAjedrez.values()){ 
             System.out.println(pieza.ordinal()+")"+pieza); 
         } 
     } 

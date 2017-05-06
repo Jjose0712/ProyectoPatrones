@@ -3,22 +3,22 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package mindgamesproyecto.juegos;
+package MindGames.Entities;
 
-import mindgamesproyecto.enums.PIEZAS_AJEDREZ;
+import MindGames.Enums.PiezasAjedrez;
 
 
 /**
  *
  * @author GSolano3
  */
-public class ajedrez implements juegoInter{
+public class Ajedrez implements IJuego{
 //    @Override
 //    public void juego(){//test
 //        System.out.println("Soy ajedrez");
 //    }
     
-    public Pieza definePiezas(PIEZAS_AJEDREZ pieza,boolean blanca,int x, int y){ 
+    public Pieza definePiezas(PiezasAjedrez pieza,boolean blanca,int x, int y){ 
         switch(pieza){ 
             case PEON: 
                 Pieza peon = new Pieza(pieza.name(), blanca?"♙":"♟",blanca); 

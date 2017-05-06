@@ -3,14 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package mindgamesproyecto.juegos;
+package MindGames.Entities;
 
 /**
  *
  * @author GSolano3
  */
-public interface juegoInter {
-    //public void juego();//test
-    public boolean comer(Pieza p); 
+public class Tablero implements IJuego{
+    @Override
+    public boolean comer(Pieza p) {
+        return true;
+    }
 }
-        

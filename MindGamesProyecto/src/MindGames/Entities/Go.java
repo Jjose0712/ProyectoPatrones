@@ -3,17 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package mindgamesproyecto.enums;
+package MindGames.Entities;
 
 /**
  *
  * @author GSolano3
  */
-public enum PIEZAS_AJEDREZ {
-    PEON, 
-    ALFIL,  
-    CABALLO,  
-    TORRE,  
-    REINA,  
-    REY 
+public class Go implements IJuego{
+    @Override
+    public boolean comer(Pieza p) {
+        return true;
+    }
 }

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package mindgamesproyecto.juegos;
+package MindGames.Entities;
 
 /**
  *
@@ -15,8 +15,8 @@ public class Pieza {
     private Boolean blanca = true; 
     private int x; 
     private int y; 
-    private juegoInter comer; 
-    public Pieza(String nombre, String imagen, Boolean blanca, int x, int y, juegoInter comer){ 
+    private IJuego comer; 
+    public Pieza(String nombre, String imagen, Boolean blanca, int x, int y, IJuego comer){ 
         setNombre(nombre); 
         setImagen(imagen); 
         setBlanca(blanca); 
@@ -73,11 +73,11 @@ public class Pieza {
         this.y = y; 
     } 
   
-    public juegoInter getComer() { 
+    public IJuego getComer() { 
         return comer; 
     } 
  
-    public void setComer(juegoInter comer) { 
+    public void setComer(IJuego comer) { 
         this.comer = comer; 
     } 
 }
