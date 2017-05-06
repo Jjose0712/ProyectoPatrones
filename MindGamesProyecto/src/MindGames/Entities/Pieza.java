@@ -80,4 +80,8 @@ public class Pieza {
     public void setComer(IJuego comer) { 
         this.comer = comer; 
     } 
+
+    public void Add(Pieza piezaB) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
